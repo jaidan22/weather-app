@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <!-- Background image -->
+    <img src="images/sunny.jpg" id="bg-img" alt="background">
+    <div id="main">
+
+      <section id="sec1" class="img">
+        <form action="" id="select">
+          <img src="images/search.png" alt="" id="search-img" />
+          <input onClick="this.select();" type="text" id="search" placeholder="Select city" />
+        </form>
+        <h1 id="temp"></h1>
+        <hr width="25%" />
+        <div>
+          <p id="max-min" class="value"></p>
+          <p id="desc" class="value"></p>
+          <p id="feels" class="value"></p>
+        </div>
+      </section>
+
+      <section class="sec2">
+        <div class="detail">
+          <img src="images/sunrise.svg" />
+          <p class="details s-rise">Sun Rise</p>
+          <p id="rise" class="details value"></p>
+        </div>
+
+        <hr width="90%" />
+
+        <div class="detail">
+          <img src="images/sunset.svg" alt="sunset" />
+          <p class="details s-set">Sun Set</p>
+          <p id="set" class="details value"></p>
+        </div>
+
+        <hr width="90%" />
+
+        <div class="detail">
+          <img src="images/wind.svg" alt="wind" />
+          <p class="details wind">Wind</p>
+          <p id="wind" class="details value"></p>
+        </div>
+
+        <hr width="90%" />
+
+        <div class="detail">
+          <img src="images/humidity.png" alt="humidity" />
+          <p class="details humidity">Humidity</p>
+          <p id="humidity" class="details value"></p>
+        </div>
+      </section>
+    </div>
+
+    <script type='text/javascript' src='config.js'></script>
+    <script src="script.js"></script>
+  </body>
+</html>

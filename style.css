@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;400;600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(0deg, #cfcece, #a8a8a8, #c2c0c0);
+
+  font-family: "Spartan", "sans-serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#bg-img {
+  position: fixed;
+  z-index: -1;
+  filter: opacity(0.3);
+  width: 120%;
+  height: 120%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75vh;
+  height: 90vh;
+  box-shadow: 0 0 8px #aaa;
+  background-color: #eee;
+  filter: blur(0);
+  overflow: hidden;
+}
+
+#sec1 {
+  color: #fff;
+  width: 100%;
+  height: 40%;
+  padding: 5vh 0;
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background-image: url("images/sunny.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+
+#sec1::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+    0deg,
+    rgb(0 0 0 / 0.7),
+    rgb(0 0 0 / 0.4),
+    rgb(0 0 0 /0)
+  );
+}
+
+#select {
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+#search {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 22px;
+  font-weight: 900;
+  color: inherit;
+  width: 100%;
+  transition: background 0.5s;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+#search:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+#search-img {
+  position: absolute;
+  right: 8px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 26.5px;
+  font-weight: 400;
+}
+
+#temp {
+  font-size: 250%;
+  font-weight: 800;
+}
+
+p#desc,
+p#feels,
+p#max-min {
+  margin: 5px 0 0 0;
+  font-size: 15px;
+}
+
+.sec2 {
+  padding: 1em 2em 1.5em 2em;
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  position: relative;
+}
+
+.details {
+  font-size: 18px;
+  margin: 0.75em 0 0.75em 30px;
+}
+.detail > img {
+  position: absolute;
+  left: 0;
+  height: 24px;
+  width: 24px;
+}
+
+@media (max-width: 445px) {
+  #main {
+    width: 100vw;
+    height: 100vh;
+  }
+  #temp {
+    font-size: 300%;
+    font-weight: 600;
+  }
+  .sec2 {
+    height: 50%;
+  }
+}
