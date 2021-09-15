@@ -1,6 +1,6 @@
-// forecast api https://api.openweathermap.org/data/2.5/forecast?q={location}&lat={lattitude}&lon={longitutde}&appid={APIKEY}
 const search = document.getElementById("search");
 const searchBtn = document.getElementById("search-img");
+const locBtn = document.getElementById("loc-img");
 const form = document.getElementById("select");
 const temp = document.getElementById('temp');
 const maxmin = document.getElementById('max-min');
@@ -22,7 +22,6 @@ const getWeather = async (location) => {
     const response = await fetch(url);
     blur();
     const data = await response.json();
-    console.log(data);
 
     if (response.status == 200)
     {
@@ -51,6 +50,19 @@ const getWeather = async (location) => {
         show();
     }
 };
+
+// get location by ip address
+const getLocIP = async () => {
+
+    const locUrl = "http://ip-api.com/json/";
+    const response = await fetch(locUrl);
+    const data = await response.json();
+    getWeather(data.city);
+}
+getLocIP();
+
+// search button event
+locBtn.addEventListener('click', getLocIP);
 
 // adding to html page
 const addToPage = (data) => {

@@ -64,7 +64,7 @@ body {
     0deg,
     rgb(0 0 0 / 0.7),
     rgb(0 0 0 / 0.4),
-    rgb(0 0 0 /0)
+    rgb(0 0 0 /0.6)
   );
 }
 
@@ -74,6 +74,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 #search {
   border: none;
   outline: none;
@@ -92,9 +93,14 @@ body {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
 }
+
 #search-img {
   position: absolute;
   right: 8px;
+}
+#loc-img {
+  position: absolute;
+  left: 8px;
 }
 
 h1 {
