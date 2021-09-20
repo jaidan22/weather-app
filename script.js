@@ -15,7 +15,7 @@ const bg = document.getElementById('bg-img');
 
 // connecting to current weather api
 const getWeather = async (location) => {
-
+    
     const apikey = config.API_KEY;
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apikey}`;
 
@@ -54,7 +54,7 @@ const getWeather = async (location) => {
 // get location by ip address
 const getLocIP = async () => {
 
-    const locUrl = "http://ip-api.com/json/";
+    const locUrl = "https://ipapi.co/json/";
     const response = await fetch(locUrl);
     const data = await response.json();
     getWeather(data.city);
