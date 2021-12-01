@@ -18,7 +18,7 @@ const bg = document.getElementById('bg-img');
 // connecting to current weather api
 const getWeather = async (location) => {
     
-    const apikey = config.API_KEY;
+    const apikey = '3eef6d6629a85e72fee5b1b12ebc2010';
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apikey}`;
 
     const response = await fetch(url);
