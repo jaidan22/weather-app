@@ -1,3 +1,4 @@
+
 const search = document.getElementById("search");
 const searchBtn = document.getElementById("search-img");
 const locBtn = document.getElementById("loc-img");
@@ -13,15 +14,11 @@ const rise = document.getElementById('rise');
 const humidity = document.getElementById('humidity');
 const bg = document.getElementById('bg-img');
 
-require('dotenv').config();
 
 // connecting to current weather api
 const getWeather = async (location) => {
     
-    // console.log(process.env);
-    const apikey = process.env.API_KEY;
-
-    // const apikey = config.API_KEY;
+    const apikey = config.API_KEY;
     const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apikey}`;
 
     const response = await fetch(url);
